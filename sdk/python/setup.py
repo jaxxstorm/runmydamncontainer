@@ -51,6 +51,8 @@ setup(name='jaxxstorm_pulumi_rdc',
           'parver>=0.2.1',
           'pulumi>=3.0.0,<4.0.0',
           'pulumi-aws>=4.0.0,<5.0.0',
+          'pulumi-azure-native>=1.0.0,<2.0.0',
+          'pulumi-gcp>=5.0.0,<6.0.0',
           'semver>=2.8.1'
       ],
       zip_safe=False)
