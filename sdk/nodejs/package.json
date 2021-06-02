@@ -1,5 +1,5 @@
 {
-    "name": "@pulumi/xyz",
+    "name": "@jaxxstorm/pulumi-rdc",
     "version": "${VERSION}",
     "scripts": {
         "build": "tsc"

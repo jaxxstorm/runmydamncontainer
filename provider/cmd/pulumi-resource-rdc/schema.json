@@ -1,0 +1,128 @@
+{
+    "name": "rdc",
+    "resources": {
+        "rdc:index:AWSInstance": {
+            "isComponent": true,
+            "inputProperties": {
+                "image": {
+                    "type": "string",
+                    "description": "The image you want to run"
+                },
+                "port": {
+                    "type": "integer",
+                    "descripton": "The port your container runs on"
+                }
+            },
+            "requiredInputs": [
+                "image",
+                "port"
+            ],
+            "plainInputs": [
+            ],
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "description": "url of your running container"
+                }
+            },
+            "required": [
+                "url"
+            ]
+        },
+        "rdc:index:AzureInstance": {
+            "isComponent": true,
+            "inputProperties": {
+                "image": {
+                    "type": "string",
+                    "description": "The image you want to run"
+                },
+                "port": {
+                    "type": "integer",
+                    "descripton": "The port your container runs on"
+                }
+            },
+            "requiredInputs": [
+                "image",
+                "port"
+            ],
+            "plainInputs": [
+            ],
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "description": "url of your running container"
+                }
+            },
+            "required": [
+                "url"
+            ]
+        },
+        "rdc:index:GCPInstance": {
+            "isComponent": true,
+            "inputProperties": {
+                "image": {
+                    "type": "string",
+                    "description": "The image you want to run"
+                },
+                "port": {
+                    "type": "integer",
+                    "descripton": "The port your container runs on"
+                },
+                "location": {
+                    "type": "string",
+                    "description": "The location to run your cloudrun container",
+                    "default": "us-central1"
+                }
+            },
+            "requiredInputs": [
+                "image",
+                "port"
+            ],
+            "plainInputs": [
+            ],
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "description": "url of your running container"
+                }
+            },
+            "required": [
+                "url"
+            ]
+        }
+    },
+    "language": {
+        "csharp": {
+            "packageReferences": {
+                "Pulumi": "3.*",
+                "Pulumi.Aws": "4.*",
+                "Pulumi.AzureNative": "1.*",
+                "Pulumi.Gcp": "5.*"
+            }
+        },
+        "go": {
+            "generateResourceContainerTypes": true,
+            "importBasePath": "github.com/jaxxsorm/pulumi-rdc/sdk/go/instance"
+        },
+        "nodejs": {
+            "dependencies": {
+                "@pulumi/aws": "^4.0.0",
+                "@pulumi-azure-native": "^1.0.0",
+                "@pulumi/gcp": "^5.0.0"
+            },
+            "devDependencies": {
+                "typescript": "^3.7.0"
+            },
+            "packageName": "@jaxxstorm/pulumi-rdc"
+        },
+        "python": {
+            "packageName": "jaxxstorm_pulumi_rdc",
+            "requires": {
+                "pulumi": ">=3.0.0,<4.0.0",
+                "pulumi-aws": ">=4.0.0,<5.0.0",
+                "pulumi-azure-native": ">=1.0.0,<2.0.0",
+                "pulumi-gcp": ">=5.0.0,<6.0.0"
+            }
+        }
+    }
+}

@@ -5,31 +5,39 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 // Export members:
+export * from "./awsinstance";
+export * from "./azureInstance";
+export * from "./gcpinstance";
 export * from "./provider";
-export * from "./staticPage";
 
 // Import resources to register:
-import { StaticPage } from "./staticPage";
+import { AWSInstance } from "./awsinstance";
+import { AzureInstance } from "./azureInstance";
+import { GCPInstance } from "./gcpinstance";
 
 const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "xyz:index:StaticPage":
-                return new StaticPage(name, <any>undefined, { urn })
+            case "rdc:index:AWSInstance":
+                return new AWSInstance(name, <any>undefined, { urn })
+            case "rdc:index:AzureInstance":
+                return new AzureInstance(name, <any>undefined, { urn })
+            case "rdc:index:GCPInstance":
+                return new GCPInstance(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
-pulumi.runtime.registerResourceModule("xyz", "index", _module)
+pulumi.runtime.registerResourceModule("rdc", "index", _module)
 
 import { Provider } from "./provider";
 
-pulumi.runtime.registerResourcePackage("xyz", {
+pulumi.runtime.registerResourcePackage("rdc", {
     version: utilities.getVersion(),
     constructProvider: (name: string, type: string, urn: string): pulumi.ProviderResource => {
-        if (type !== "pulumi:providers:xyz") {
+        if (type !== "pulumi:providers:rdc") {
             throw new Error(`unknown provider type ${type}`);
         }
         return new Provider(name, <any>undefined, { urn });

@@ -13,9 +13,11 @@
         "strict": true
     },
     "files": [
+        "awsinstance.ts",
+        "azureInstance.ts",
+        "gcpinstance.ts",
         "index.ts",
         "provider.ts",
-        "staticPage.ts",
         "utilities.ts"
     ]
 }
