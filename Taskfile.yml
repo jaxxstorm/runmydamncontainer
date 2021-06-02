@@ -124,6 +124,11 @@ tasks:
     cmds:
       - "yarn link --cwd sdk/nodejs/bin/"
   
+  install:python:
+    desc: "Install the PyPi SDK for local dev"
+    cmds:
+      - pip3 install -e sdk/python/bin/
+  
   install:sdks:
     desc: "Install all SDKs for local dev"
     cmds:
