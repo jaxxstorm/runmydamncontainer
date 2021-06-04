@@ -421,8 +421,8 @@ github.com/pulumi/pulumi-aws/sdk/v4 v4.6.0 h1:ZLPVTJNTrAuCmbmkZyZte9AvO6l/nNv1L5
 github.com/pulumi/pulumi-aws/sdk/v4 v4.6.0/go.mod h1:31LC9pNuxOtzZ7E1/MaSHmeKkU/J9yAWsHjBqZ3GWjI=
 github.com/pulumi/pulumi-azure-native/sdk v1.8.0 h1:s6viDzGcfrmCyVWG/U7JGTUZT2SB+GSvx2FQXoaeKOg=
 github.com/pulumi/pulumi-azure-native/sdk v1.8.0/go.mod h1:d9melP4WWGoAbX9uVgt2iBys1f/iiRTBQITm44luo8Q=
-github.com/pulumi/pulumi-gcp/sdk/v5 v5.6.0 h1:8z2efdcya0fRlSJpNbTbRD3lsopJqGXlE5/55IjO3No=
-github.com/pulumi/pulumi-gcp/sdk/v5 v5.6.0/go.mod h1:IsAf9XEar0Nwr0cNMpnlYJZlKqUgmDTx+ipa+cBEzyc=
+github.com/pulumi/pulumi-gcp/sdk/v5 v5.7.0 h1:Mf9OX9lubaL1/jzuRZ5CGEkALdWPLW8c8ZOA0wGlY/w=
+github.com/pulumi/pulumi-gcp/sdk/v5 v5.7.0/go.mod h1:IsAf9XEar0Nwr0cNMpnlYJZlKqUgmDTx+ipa+cBEzyc=
 github.com/pulumi/pulumi/pkg/v3 v3.3.1 h1:FYgTooCZMQsb964WBeiaMAUNOdoEn0t2qpSPaLRh5Wk=
 github.com/pulumi/pulumi/pkg/v3 v3.3.1/go.mod h1:C6QWinR1SmQDpxBE8AiQEunU1tj9Yy01hw3lFMw7VPc=
 github.com/pulumi/pulumi/sdk/v3 v3.3.0/go.mod h1:GBHyQ7awNQSRmiKp/p8kIKrGrMOZeA/k2czoM/GOqds=
