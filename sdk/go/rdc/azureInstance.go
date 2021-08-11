@@ -118,7 +118,7 @@ type AzureInstanceArrayInput interface {
 type AzureInstanceArray []AzureInstanceInput
 
 func (AzureInstanceArray) ElementType() reflect.Type {
-	return reflect.TypeOf(([]*AzureInstance)(nil))
+	return reflect.TypeOf((*[]*AzureInstance)(nil)).Elem()
 }
 
 func (i AzureInstanceArray) ToAzureInstanceArrayOutput() AzureInstanceArrayOutput {
@@ -143,7 +143,7 @@ type AzureInstanceMapInput interface {
 type AzureInstanceMap map[string]AzureInstanceInput
 
 func (AzureInstanceMap) ElementType() reflect.Type {
-	return reflect.TypeOf((map[string]*AzureInstance)(nil))
+	return reflect.TypeOf((*map[string]*AzureInstance)(nil)).Elem()
 }
 
 func (i AzureInstanceMap) ToAzureInstanceMapOutput() AzureInstanceMapOutput {

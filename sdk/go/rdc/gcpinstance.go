@@ -125,7 +125,7 @@ type GCPInstanceArrayInput interface {
 type GCPInstanceArray []GCPInstanceInput
 
 func (GCPInstanceArray) ElementType() reflect.Type {
-	return reflect.TypeOf(([]*GCPInstance)(nil))
+	return reflect.TypeOf((*[]*GCPInstance)(nil)).Elem()
 }
 
 func (i GCPInstanceArray) ToGCPInstanceArrayOutput() GCPInstanceArrayOutput {
@@ -150,7 +150,7 @@ type GCPInstanceMapInput interface {
 type GCPInstanceMap map[string]GCPInstanceInput
 
 func (GCPInstanceMap) ElementType() reflect.Type {
-	return reflect.TypeOf((map[string]*GCPInstance)(nil))
+	return reflect.TypeOf((*map[string]*GCPInstance)(nil)).Elem()
 }
 
 func (i GCPInstanceMap) ToGCPInstanceMapOutput() GCPInstanceMapOutput {

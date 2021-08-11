@@ -118,7 +118,7 @@ type AWSInstanceArrayInput interface {
 type AWSInstanceArray []AWSInstanceInput
 
 func (AWSInstanceArray) ElementType() reflect.Type {
-	return reflect.TypeOf(([]*AWSInstance)(nil))
+	return reflect.TypeOf((*[]*AWSInstance)(nil)).Elem()
 }
 
 func (i AWSInstanceArray) ToAWSInstanceArrayOutput() AWSInstanceArrayOutput {
@@ -143,7 +143,7 @@ type AWSInstanceMapInput interface {
 type AWSInstanceMap map[string]AWSInstanceInput
 
 func (AWSInstanceMap) ElementType() reflect.Type {
-	return reflect.TypeOf((map[string]*AWSInstance)(nil))
+	return reflect.TypeOf((*map[string]*AWSInstance)(nil)).Elem()
 }
 
 func (i AWSInstanceMap) ToAWSInstanceMapOutput() AWSInstanceMapOutput {
