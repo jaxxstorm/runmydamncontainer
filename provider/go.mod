@@ -7,6 +7,6 @@ require (
 	github.com/pulumi/pulumi-aws/sdk/v4 v4.15.0
 	github.com/pulumi/pulumi-azure-native/sdk v1.20.0
 	github.com/pulumi/pulumi-gcp/sdk/v5 v5.15.0
-	github.com/pulumi/pulumi/pkg/v3 v3.9.1
-	github.com/pulumi/pulumi/sdk/v3 v3.9.1
+	github.com/pulumi/pulumi/pkg/v3 v3.28.0
+	github.com/pulumi/pulumi/sdk/v3 v3.28.0
 )
